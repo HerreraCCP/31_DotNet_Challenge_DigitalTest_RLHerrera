@@ -1,3 +1,5 @@
+# EN-US #
+
 You are tasked with writing a piece of software to do a token generation for cashless registration.
 Your microservice should expose 2 different APIs
 
@@ -82,3 +84,90 @@ The result of that would be [4, 5, 3]
 
 Given the array [1, 2, 3] after the first rotation, the array becomes [3, 1, 2].
 After the second (and final) rotation, the array becomes [2, 3, 1].
+
+
+# PT-BR #
+
+Você tem a tarefa de escrever um software para gerar um token para registro sem dinheiro.
+Seu microsserviço deve expor 2 APIs diferentes
+
+**Você deve usar a plataforma .Net core para desenvolver a solução.**
+
+***Nós realmente encorajamos você a trazer quaisquer perguntas específicas que você possa ter sobre isso.***
+
+***Requisitos:***
+  • O aplicativo deve ser executável em máquinas baseadas em Windows e Unix;
+  • Você não precisa se preocupar com bancos de dados; não há problema em usar o armazenamento em processo e na memória;
+  • Deve ter qualidade de produção de acordo com o seu entendimento - testes, README, Swagger, etc.
+
+***Notas gerais:***
+  • Sinta-se à vontade para expandir seu projeto por escrito;
+  • Você enviará o código-fonte para o git;
+  
+***Coisas que estamos procurando:***
+  • Imutabilidade;
+  • Tratamento adequado da concorrência;
+  • Separação de preocupações;
+  • Testes unitários e de integração;
+  • Projeto de API;
+  • Legibilidade do código;
+  • Manipulação de erros.
+
+**1 – API que recebe cartão de cliente e salva no db**
+
+Pedir informação:
+
+***CustomerId*** - int
+***Número do cartão*** – longo – máximo de 16 caracteres
+***CVV*** – int - máximo de 5 caracteres
+
+Informações de resposta:
+
+***Data de registro – Data agora em UTC
+Token – longo – (O tamanho do token pode variar)
+CardId - int***
+
+**2 – API que valida esse token com base nos dados fornecidos na solicitação**
+
+Pedir informação:
+
+***CustomerId – int
+ID do cartão - int
+Token – longo – (O tamanho do token pode variar)
+CVV – int - máximo 5 caracteres***
+
+Informações de resposta:
+
+***Validado*** – bool
+
+Algoritmo
+
+O algoritmo usado para criar o token é:
+
+  a) Obter os últimos 4 dígitos do cartão
+  b) Aplique o algoritmo descrito abaixo no Problema #1 e o número de rotações seria o número CVV.
+
+O algoritmo para validar o token
+
+  1. Se a data de criação do token for superior a 30 min, retorne como inválido
+  2. Use o cartão para localizar o número do cartão
+  3. Se o cliente não for o titular do cartão, devolver como inválido
+  4. Imprima o número do cartão no console
+  5. Processe o algoritmo descrito acima no processo de criação para criar o token novamente e compare com o token recebido na solicitação, se corresponder retornar true caso contrário false.
+  
+  **Problema nº 1**
+
+A operação chamada rotação circular à direita em um array de inteiros consiste em mover o último array
+elemento para a primeira posição e deslocando todos os elementos restantes para a direita. Dada uma matriz de inteiros,
+execute a operação de rotação **várias vezes.**
+
+Para cada matriz, execute várias rotações circulares à direita e retorne essa matriz.
+Por exemplo, array a = [3, 4, 5], número de rotações k = 2.
+Primeiro realizamos as duas rotações:
+      [3, 4, 5] => [5, 3, 4] => [4, 5, 3]
+O resultado disso seria [4, 5, 3]
+
+**Explicação**
+
+Dada a matriz [1, 2, 3] após a primeira rotação, a matriz se torna [3, 1, 2].
+Após a segunda (e última) rotação, a matriz se torna [2, 3, 1].
