@@ -8,22 +8,22 @@ Your microservice should expose 2 different APIs
 ***We really encourage you to bring up any specific questions you might have about it.***
 
 ***Requirements:***
-  • The application must be executable both in Windows and Unix based machines;
-  • You don't have to worry about databases; it's fine to use in-process, in-memory storage;
-  • It must be production quality according to your understanding of it - tests, README, Swagger, etc.
+  * The application must be executable both in Windows and Unix based machines;
+  * You don't have to worry about databases; it's fine to use in-process, in-memory storage;
+  * It must be production quality according to your understanding of it - tests, README, Swagger, etc.
 
 ***General notes:***
-  • Feel free to expand your design in writing;
-  • You will submit the source code to git;
+  * Feel free to expand your design in writing;
+  * You will submit the source code to git;
   
 ***Things we're looking for:***
-  • Immutability;
-  • Proper concurrency handling;
-  • Separation of concerns;
-  • Unit and integration tests;
-  • API design;
-  • Code readability;
-  • Error handling.
+  * Immutability;
+  * Proper concurrency handling;
+  * Separation of concerns;
+  * Unit and integration tests;
+  * API design;
+  * Code readability;
+  * Error handling.
 
 **1 – API that receive customer card and save it on the db**
 
@@ -96,22 +96,22 @@ Seu microsserviço deve expor 2 APIs diferentes
 ***Nós realmente encorajamos você a trazer quaisquer perguntas específicas que você possa ter sobre isso.***
 
 ***Requisitos:***
-  • O aplicativo deve ser executável em máquinas baseadas em Windows e Unix;
-  • Você não precisa se preocupar com bancos de dados; não há problema em usar o armazenamento em processo e na memória;
-  • Deve ter qualidade de produção de acordo com o seu entendimento - testes, README, Swagger, etc.
+  * O aplicativo deve ser executável em máquinas baseadas em Windows e Unix;
+  * Você não precisa se preocupar com bancos de dados; não há problema em usar o armazenamento em processo e na memória;
+  * Deve ter qualidade de produção de acordo com o seu entendimento - testes, README, Swagger, etc.
 
 ***Notas gerais:***
-  • Sinta-se à vontade para expandir seu projeto por escrito;
-  • Você enviará o código-fonte para o git;
+  * Sinta-se à vontade para expandir seu projeto por escrito;
+  * Você enviará o código-fonte para o git;
   
 ***Coisas que estamos procurando:***
-  • Imutabilidade;
-  • Tratamento adequado da concorrência;
-  • Separação de preocupações;
-  • Testes unitários e de integração;
-  • Projeto de API;
-  • Legibilidade do código;
-  • Manipulação de erros.
+  * Imutabilidade;
+  * Tratamento adequado da concorrência;
+  * Separação de preocupações;
+  * Testes unitários e de integração;
+  * Projeto de API;
+  * Legibilidade do código;
+  * Manipulação de erros.
 
 **1 – API que recebe cartão de cliente e salva no db**
 
